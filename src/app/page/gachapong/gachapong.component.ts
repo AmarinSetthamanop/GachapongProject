@@ -32,79 +32,80 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
   constructor (private router : Router) {}
 
   // สร้าง list ของรูปภาพ เครื่องเล่น Gachapong และชื่ออุปกรณ์ที่ใช้กับเครื่อง โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
-  // images_list_gachapong_machine : Array<{ title: string; path: string }> = [
-  //   { title: 'cupboard_gacha', path: '../../../assets/machine_gacha.png' }, // รูป ตู้ gacha
-  //   { title: 'lever', path: '../../../assets/lever.png' }, // รูป คันโยก
-  //   { title: 'handle_arm', path: '../../../assets/handle_arm.png' }, // รูป แขนจับลูกบอล
-  //   { title: 'light_background', path: '../../../assets/light.png' }, // รูป แสงพื้นหลังฃ
-  //   { title: 'background_clouds', path: '../../../assets/background_clouds.png' }, // รูป พื้นหลังก้อนเมฆ
-  //   { title: 'teamLink_logo', path: '../../../assets/teamLink_logo.png' }, // รูป logo TeamLink
-  //   { title: 'teamLink_text', path: '../../../assets/teamLink_text.png' }, // รูป ชื่อ TeamLink
-  //   { title: 'papers', path: '../../../assets/papers.png' }, // รูป เศษกระดาษ
-  //   { title: 'hand', path: '../../../assets/hand.png' }, // รูป มือ
-  // ];
-
-  // // list ของรูปภาพ ลูกบอลหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
-  // images_list_balls : Array<{ title: string; path: string }> = [
-  //   { title: 'ball_1', path: '../../../assets/ball_1.png' }, // รูป บอลสีฟ้าเข้ม
-  //   { title: 'ball_2', path: '../../../assets/ball_2.png' }, // รูป บอลสีม่วง
-  //   { title: 'ball_3', path: '../../../assets/ball_3.png' }, // รูป บอลสีเขียว
-  //   { title: 'ball_4', path: '../../../assets/ball_4.png' }, // รูป บอลสีฟ้าอ่อน
-  //   { title: 'ball_5', path: '../../../assets/ball_5.png' }, // รูป บอลสีชมพู
-  //   { title: 'ball_6', path: '../../../assets/ball_6.png' }, // รูป บอลสีเหลือง
-  //   { title: 'ball_7', path: '../../../assets/ball_7.png' }, // รูป บอลสีน้ำเงิน
-  //   { title: 'ball_8', path: '../../../assets/ball_8.png' }, // รูป บอลสีแดง
-  // ];
-
-  // // list ของรูปภาพ กล่องของขวัญหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
-  // images_list_gifts : Array<{ title: string; path: string }> = [
-  //   { title: 'gift_1', path: '../../../assets/box_1.png' }, // รูป กล่องของขวัญสีฟ้าเข้ม
-  //   { title: 'gift_2', path: '../../../assets/box_2.png' }, // รูป กล่องของขวัญสีม่วง
-  //   { title: 'gift_3', path: '../../../assets/box_3.png' }, // รูป กล่องของขวัญสีเขียว
-  //   { title: 'gift_4', path: '../../../assets/box_4.png' }, // รูป กล่องของขวัญสีฟ้าอ่อน
-  //   { title: 'gift_5', path: '../../../assets/box_5.png' }, // รูป กล่องของขวัญสีชมพู
-  //   { title: 'gift_6', path: '../../../assets/box_6.png' }, // รูป กล่องของขวัญสีเหลือง
-  //   { title: 'gift_7', path: '../../../assets/box_7.png' }, // รูป กล่องของขวัญสีน้ำเงิน
-  //   { title: 'gift_8', path: '../../../assets/box_8.png' }, // รูป กล่องของขวัญสีแดง
-  // ];
-
-
-  //  path file สำหรับ build
   images_list_gachapong_machine : Array<{ title: string; path: string }> = [
-    { title: 'cupboard_gacha', path: './assets/machine_gacha.png' }, // รูป ตู้ gacha
-    { title: 'lever', path: './assets/lever.png' }, // รูป คันโยก
-    { title: 'handle_arm', path: './assets/handle_arm.png' }, // รูป แขนจับลูกบอล
-    { title: 'light_background', path: './assets/light.png' }, // รูป แสงพื้นหลังฃ
-    { title: 'background_clouds', path: './assets/background_clouds.png' }, // รูป พื้นหลังก้อนเมฆ
-    { title: 'teamLink_logo', path: './assets/teamLink_logo.png' }, // รูป logo TeamLink
-    { title: 'teamLink_text', path: './assets/teamLink_text.png' }, // รูป ชื่อ TeamLink
-    { title: 'papers', path: './assets/papers.png' }, // รูป เศษกระดาษ
-    { title: 'hand', path: './assets/hand.png' }, // รูป มือ
+    { title: 'cupboard_gacha', path: '../../../assets/machine_gacha.png' }, // รูป ตู้ gacha
+    { title: 'lever', path: '../../../assets/lever.png' }, // รูป คันโยก
+    { title: 'handle_arm', path: '../../../assets/handle_arm.png' }, // รูป แขนจับลูกบอล
+    { title: 'light_background', path: '../../../assets/light.png' }, // รูป แสงพื้นหลังฃ
+    { title: 'background_clouds', path: '../../../assets/background_clouds.png' }, // รูป พื้นหลังก้อนเมฆ
+    { title: 'teamLink_logo', path: '../../../assets/teamLink_logo.png' }, // รูป logo TeamLink
+    { title: 'teamLink_text', path: '../../../assets/teamLink_text.png' }, // รูป ชื่อ TeamLink
+    { title: 'papers', path: '../../../assets/papers.png' }, // รูป เศษกระดาษ
+    { title: 'hand', path: '../../../assets/hand.png' }, // รูป มือ
   ];
 
   // list ของรูปภาพ ลูกบอลหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
   images_list_balls : Array<{ title: string; path: string }> = [
-    { title: 'ball_1', path: './assets/ball_1.png' }, // รูป บอลสีฟ้าเข้ม
-    { title: 'ball_2', path: './assets/ball_2.png' }, // รูป บอลสีม่วง
-    { title: 'ball_3', path: './assets/ball_3.png' }, // รูป บอลสีเขียว
-    { title: 'ball_4', path: './assets/ball_4.png' }, // รูป บอลสีฟ้าอ่อน
-    { title: 'ball_5', path: './assets/ball_5.png' }, // รูป บอลสีชมพู
-    { title: 'ball_6', path: './assets/ball_6.png' }, // รูป บอลสีเหลือง
-    { title: 'ball_7', path: './assets/ball_7.png' }, // รูป บอลสีน้ำเงิน
-    { title: 'ball_8', path: './assets/ball_8.png' }, // รูป บอลสีแดง
+    { title: 'ball_1', path: '../../../assets/ball_1.png' }, // รูป บอลสีฟ้าเข้ม
+    { title: 'ball_2', path: '../../../assets/ball_2.png' }, // รูป บอลสีม่วง
+    { title: 'ball_3', path: '../../../assets/ball_3.png' }, // รูป บอลสีเขียว
+    { title: 'ball_4', path: '../../../assets/ball_4.png' }, // รูป บอลสีฟ้าอ่อน
+    { title: 'ball_5', path: '../../../assets/ball_5.png' }, // รูป บอลสีชมพู
+    { title: 'ball_6', path: '../../../assets/ball_6.png' }, // รูป บอลสีเหลือง
+    { title: 'ball_7', path: '../../../assets/ball_7.png' }, // รูป บอลสีน้ำเงิน
+    { title: 'ball_8', path: '../../../assets/ball_8.png' }, // รูป บอลสีแดง
   ];
 
   // list ของรูปภาพ กล่องของขวัญหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
   images_list_gifts : Array<{ title: string; path: string }> = [
-    { title: 'gift_1', path: './assets/box_1.png' }, // รูป กล่องของขวัญสีฟ้าเข้ม
-    { title: 'gift_2', path: './assets/box_2.png' }, // รูป กล่องของขวัญสีม่วง
-    { title: 'gift_3', path: './assets/box_3.png' }, // รูป กล่องของขวัญสีเขียว
-    { title: 'gift_4', path: './assets/box_4.png' }, // รูป กล่องของขวัญสีฟ้าอ่อน
-    { title: 'gift_5', path: './assets/box_5.png' }, // รูป กล่องของขวัญสีชมพู
-    { title: 'gift_6', path: './assets/box_6.png' }, // รูป กล่องของขวัญสีเหลือง
-    { title: 'gift_7', path: './assets/box_7.png' }, // รูป กล่องของขวัญสีน้ำเงิน
-    { title: 'gift_8', path: './assets/box_8.png' }, // รูป กล่องของขวัญสีแดง
+    { title: 'gift_1', path: '../../../assets/box_1.png' }, // รูป กล่องของขวัญสีฟ้าเข้ม
+    { title: 'gift_2', path: '../../../assets/box_2.png' }, // รูป กล่องของขวัญสีม่วง
+    { title: 'gift_3', path: '../../../assets/box_3.png' }, // รูป กล่องของขวัญสีเขียว
+    { title: 'gift_4', path: '../../../assets/box_4.png' }, // รูป กล่องของขวัญสีฟ้าอ่อน
+    { title: 'gift_5', path: '../../../assets/box_5.png' }, // รูป กล่องของขวัญสีชมพู
+    { title: 'gift_6', path: '../../../assets/box_6.png' }, // รูป กล่องของขวัญสีเหลือง
+    { title: 'gift_7', path: '../../../assets/box_7.png' }, // รูป กล่องของขวัญสีน้ำเงิน
+    { title: 'gift_8', path: '../../../assets/box_8.png' }, // รูป กล่องของขวัญสีแดง
   ];
+
+
+
+  // //  path file สำหรับ build
+  // images_list_gachapong_machine : Array<{ title: string; path: string }> = [
+  //   { title: 'cupboard_gacha', path: './assets/machine_gacha.png' }, // รูป ตู้ gacha
+  //   { title: 'lever', path: './assets/lever.png' }, // รูป คันโยก
+  //   { title: 'handle_arm', path: './assets/handle_arm.png' }, // รูป แขนจับลูกบอล
+  //   { title: 'light_background', path: './assets/light.png' }, // รูป แสงพื้นหลังฃ
+  //   { title: 'background_clouds', path: './assets/background_clouds.png' }, // รูป พื้นหลังก้อนเมฆ
+  //   { title: 'teamLink_logo', path: './assets/teamLink_logo.png' }, // รูป logo TeamLink
+  //   { title: 'teamLink_text', path: './assets/teamLink_text.png' }, // รูป ชื่อ TeamLink
+  //   { title: 'papers', path: './assets/papers.png' }, // รูป เศษกระดาษ
+  //   { title: 'hand', path: './assets/hand.png' }, // รูป มือ
+  // ];
+
+  // // list ของรูปภาพ ลูกบอลหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
+  // images_list_balls : Array<{ title: string; path: string }> = [
+  //   { title: 'ball_1', path: './assets/ball_1.png' }, // รูป บอลสีฟ้าเข้ม
+  //   { title: 'ball_2', path: './assets/ball_2.png' }, // รูป บอลสีม่วง
+  //   { title: 'ball_3', path: './assets/ball_3.png' }, // รูป บอลสีเขียว
+  //   { title: 'ball_4', path: './assets/ball_4.png' }, // รูป บอลสีฟ้าอ่อน
+  //   { title: 'ball_5', path: './assets/ball_5.png' }, // รูป บอลสีชมพู
+  //   { title: 'ball_6', path: './assets/ball_6.png' }, // รูป บอลสีเหลือง
+  //   { title: 'ball_7', path: './assets/ball_7.png' }, // รูป บอลสีน้ำเงิน
+  //   { title: 'ball_8', path: './assets/ball_8.png' }, // รูป บอลสีแดง
+  // ];
+
+  // // list ของรูปภาพ กล่องของขวัญหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
+  // images_list_gifts : Array<{ title: string; path: string }> = [
+  //   { title: 'gift_1', path: './assets/box_1.png' }, // รูป กล่องของขวัญสีฟ้าเข้ม
+  //   { title: 'gift_2', path: './assets/box_2.png' }, // รูป กล่องของขวัญสีม่วง
+  //   { title: 'gift_3', path: './assets/box_3.png' }, // รูป กล่องของขวัญสีเขียว
+  //   { title: 'gift_4', path: './assets/box_4.png' }, // รูป กล่องของขวัญสีฟ้าอ่อน
+  //   { title: 'gift_5', path: './assets/box_5.png' }, // รูป กล่องของขวัญสีชมพู
+  //   { title: 'gift_6', path: './assets/box_6.png' }, // รูป กล่องของขวัญสีเหลือง
+  //   { title: 'gift_7', path: './assets/box_7.png' }, // รูป กล่องของขวัญสีน้ำเงิน
+  //   { title: 'gift_8', path: './assets/box_8.png' }, // รูป กล่องของขวัญสีแดง
+  // ];
 
 
 

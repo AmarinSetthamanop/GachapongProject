@@ -28,9 +28,6 @@ import { gsap } from "gsap";
 
 export class GachapongComponent implements OnInit { // เรียกใช้งาน class OnInit เพื่อใช้งาน function ngOnit
 
-  // constructor จะทำงานก่อนเสมอเมื่อเรียกใช้งาน class นี้
-  constructor (private router : Router) {}
-
   // สร้าง list ของรูปภาพ เครื่องเล่น Gachapong และชื่ออุปกรณ์ที่ใช้กับเครื่อง โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
   // images_list_gachapong_machine : Array<{ title: string; path: string }> = [
   //   { title: 'cupboard_gacha', path: '../../../assets/machine_gacha.png' }, // รูป ตู้ gacha
@@ -206,6 +203,13 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
   private prizeBallClick: (() => void) | undefined;
 
 
+  // constructor จะทำงานก่อนเสมอเมื่อเรียกใช้งาน class นี้
+  constructor (private router : Router) {
+    // สุ่มกล่องของขวัญ ใน images_list_gifts ให้กับตัวแปล
+    this.prize_gift = this.images_list_gifts[ Math.floor(Math.random() * (this.images_list_gifts.length - 1)) ]; // ใช่ Math.floor() เพื่อลบจุดทศนิยมออก
+  }
+
+
   //--------------------------------------------------- function ngOnInit() ทำงานหลังจาก HTML DOM (Document Object Model) ถูกสร้างเสร็จแล้ว
   ngOnInit(): void {
     // กำหนด element(tag ต่างๆ) ให้กับตัวแปล
@@ -255,7 +259,7 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
     console.log(this.list_of_balls);
 
     // สุ่มกล่องของขวัญ ใน images_list_gifts ให้กับตัวแปล
-    this.prize_gift = this.images_list_gifts[ Math.floor(Math.random() * (this.images_list_gifts.length - 1)) ]; // ใช่ Math.floor() เพื่อลบจุดทศนิยมออก
+    // this.prize_gift = this.images_list_gifts[ Math.floor(Math.random() * (this.images_list_gifts.length - 1)) ]; // ใช่ Math.floor() เพื่อลบจุดทศนิยมออก
 
     // เรียกใช้งาน animation เลื่อนตู้กาชาขึ้นมา
     this.animation_gachapong_up();

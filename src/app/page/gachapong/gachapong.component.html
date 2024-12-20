@@ -1,0 +1,105 @@
+
+
+
+<!-- main frame || หน้าจอหลัก -->
+<div id="gachapong_main_frame" class="gachapong_main_frame">
+  <!-- game frame || หน้าจอสำหรับแสดงองค์ประกอบของตู้ gacha ทั้งหมด -->
+  <div id="game_frame" class="game_frame">
+
+    <!-- ส่วนประกอบของ ตู้กาชา -->
+    <div id="machine_gacha_layout" class="machine_gacha_layout">
+      <!-- รูป ตู้กาชา -->
+      <img id="img_machine" class="img_machine" src="{{ images_list_gachapong_machine[0].path }}" alt="{{ images_list_gachapong_machine[0].title }}">
+
+      <!-- สิ่งต่างๆ ที่แสดงอยู่ด้านในตู้กระจก (ลูกบอลหลากสี || แขนจับ) -->
+      <div id="all_items_in_machine" class="all_items_in_machine">
+
+        <!-- ตัวแสดง เส้นเชือก ของ แขนจับลูกบอล ตอนที่เลื่อนลงมาคีบลูกบอล -->
+        <div id="rope_of_handle_arm" class="rope_of_handle_arm"></div>
+
+        <!-- รูปแขนจับ -->
+        <img id="img_handle_arm" class="img_handle_arm" src="{{ images_list_gachapong_machine[2].path }}" alt="{{ images_list_gachapong_machine[2].title }}">
+
+        <!-- div สำหรับ ลูกบอลหลากสี แถวที่ 1 (ด้านบนสุด) -->
+        <div id="div_of_img_balls_1" class="div_of_img_balls_1">
+          <!-- ลูกบอลหลากสีที่ถูกเพิ่มมาใส่ tag div นี้โดย TypeScript -->
+        </div>
+        <!-- div สำหรับ ลูกบอลหลากสี แถวที่ 2 (ตรงกลาง) -->
+        <div id="div_of_img_balls_2" class="div_of_img_balls_2_3_4">
+          <!-- ลูกบอลหลากสีที่ถูกเพิ่มมาใส่ tag div นี้โดย TypeScript -->
+        </div>
+        <!-- div สำหรับ ลูกบอลหลากสี แถวที่ 3 (ตรงกลางล่าง) -->
+        <div id="div_of_img_balls_3" class="div_of_img_balls_2_3_4">
+          <!-- ลูกบอลหลากสีที่ถูกเพิ่มมาใส่ tag div นี้โดย TypeScript -->
+        </div>
+        <!-- div สำหรับ ลูกบอลหลากสี แถวที่ 4 (ด้านล่างสุด) -->
+        <div id="div_of_img_balls_4" class="div_of_img_balls_2_3_4">
+          <!-- ลูกบอลหลากสีที่ถูกเพิ่มมาใส่ tag div นี้โดย TypeScript -->
+        </div>
+
+      </div>
+
+      <!-- สิ่งต่างๆ ที่แสดงอยู่ด้านนอกตู้กระจก || รูป logo TeamLink และ รูปข้อความชื่อ TeamLink -->
+      <div id="img_teamLinkLogo_and_teamLinkText" class="img_teamLinkLogo_and_teamLinkText">
+        <!-- รูป logo TeamLink -->
+        <img id="img_teamLing_logo" class="img_teamLing_logo" src="{{ images_list_gachapong_machine[5].path }}" alt="{{ images_list_gachapong_machine[5].title }}">
+        <!-- รูปข้อความชื่อ TeamLink -->
+        <img id="img_teamLing_text" class="img_teamLing_text" src="{{ images_list_gachapong_machine[6].path }}" alt="{{ images_list_gachapong_machine[6].title }}">
+      </div>
+
+      <!-- รูปคันโยก เมื่อกดที่รูปจะไปเรียกใช้งาน animation โยกคันโยก ซ้าย-ขวา -->
+      <img id="img_lever" class="img_lever" src="{{ images_list_gachapong_machine[1].path }}" alt="{{ images_list_gachapong_machine[1].title }}">
+
+      <!-- รูปมือ || พร้อม animation -->
+      <img id="img_hand" class="img_hand_1" src="{{ images_list_gachapong_machine[8].path }}" alt="{{ images_list_gachapong_machine[8].title }}">
+
+      <!-- h2 text ข้อความ แสดงคำอธิบาย -->
+      <h2 id="h2_text_hint" class="h2_text_hint">{{ text_hint }}</h2>
+
+      <!-- div สำหรับเบลอพื้นหบัง เมื่อผู้ใช้คลิกหยิบลูกบอลรางวัญขึ้นมา || โดยจะไม่เบลอแค่ลูกบอลรางวัลอย่างเดียว -->
+      <div id="div_of_background_blur" class="div_of_background_blur"></div>
+
+      <!-- รูปบอลที่เป็นรางวัล || โดยดึงเอามาจาก ist_of_balls ลูกใดลูกหนึง || มีชนิดข้อมูลเป็น  HTMLElement -->
+      <img id="img_prize_ball_out_machine" class="img_prize_ball_out_machine" src="{{ list_of_balls[13].getAttribute('src') }}" alt="{{ list_of_balls[13].getAttribute('alt') }}">
+
+      <!-- รูปแสดงเศษกระดาษโปรยปราย
+      <img id="img_papers" class="img_papers" src="{{ images_list_gachapong_machine[7].path }}" alt="{{ images_list_gachapong_machine[7].title }}"> -->
+
+    </div>
+
+    <!-- div ของ แสงหมุนพื้นหลัง ข้อความ และ กล่องของขวัญ -->
+    <div id="div_of_lightBackground_hintOfGift_prizeGift" class="div_of_lightBackground_hintOfGift_prizeGift">
+      <!-- รูปแสงหมุน -->
+      <img id="img_light_background" class="img_light_background" src="{{ images_list_gachapong_machine[3].path }}" alt="{{ images_list_gachapong_machine[3].title }}">
+
+      <!-- h2 text ข้อความ แสดงคำอธิบาย ของกล่องของขวัญ -->
+      <h2 id="h2_text_hint_of_gift" class="h2_text_hint_of_gift"></h2>
+
+      <!-- รูปกล่องของขวัญ -->
+      <img id="img_prize_gift" class="img_prize_gift" src="{{ prize_gift.path }}" alt="{{ prize_gift.title }}">
+
+      <!-- รูปแสดงเศษกระดาษโปรยปราย -->
+      <img id="img_papers" class="img_papers" src="{{ images_list_gachapong_machine[7].path }}" alt="{{ images_list_gachapong_machine[7].title }}">
+    </div>
+
+    <!-- div ส่วนแสดง ปุ่มกดกลับหน้าบ้าน และ ปุ่มกดเล่นอีกครั้ง -->
+    <div id="div_of_buttons_goHome_playAgain" class="div_of_buttons_goHome_playAgain">
+      <!-- ปุ่มกดกลับบ้าน -->
+      <button id="button_goHomePage" class="button_goHomePage" mat-flat-button (click)="go_to_home_page()">
+        <mat-icon class="button_icon">home</mat-icon>
+        Home
+      </button>
+      <!-- ปุ่มเล่นอีกครั้ง -->
+      <button id="button_playAgain" class="button_playAgain" mat-flat-button (click)="play_again()">
+        <mat-icon class="button_icon">autorenew</mat-icon>
+        Again
+      </button>
+    </div>
+
+
+  </div>
+
+  <!-- รูปบอลที่เป็นรางวัล || โดยดึงเอามาจาก ist_of_balls ลูกใดลูกหนึง || มีชนิดข้อมูลเป็น  HTMLElement
+  <img id="img_prize_ball_out_machine" class="img_prize_ball_out_machine" src="{{ list_of_balls[10].getAttribute('src') }}" alt="{{ list_of_balls[10].getAttribute('alt') }}"> -->
+
+</div>

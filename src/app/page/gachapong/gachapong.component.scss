@@ -1,0 +1,407 @@
+// สร้าง object แล้ว กำหนดรูปแบบของ ขอบข้อความ
+// %stroke {
+// 	text-shadow: 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white),
+//   0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white),
+//   0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white),
+//   0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white);
+// 	filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.2));
+// }
+
+// สร้าง object แล้ว กำหนดรูปแบบของ ขอบข้อความ
+%stroke {
+	text-shadow: 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white);
+	filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.2));
+}
+
+
+// main frame || หน้าจอหลัก
+.gachapong_main_frame {
+  // background-color: rgb(110, 110, 109);
+  position: relative; // กำหนดให้เป็น relative div แม่ (parent)
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  margin: 0%;
+  overflow: hidden; // ซ่อน scrollbar ทั้งหมด || เนื่องจากถ้ามีรูป หรืออะไรก็ตามที่ใหญ่เกินขนาดหน้าจอ จะทำให้เกิดการ scrollbar ขึ้นได้
+
+  // game frame || หน้าจอสำหรับแสดงองค์ประกอบของตู้ gacha ทั้งหมด
+  .game_frame {
+    // background-color: aquamarine;
+    position: relative; // กำหนดให้เป็น relative div แม่ (parent)
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/background_clouds.png) center/auto 100% no-repeat; // พื้นหลัง รูปก้อนเมฆ
+    padding: 0%;
+    margin: 0%;
+
+    // ส่วนประกอบของ ตู้กาชา
+    .machine_gacha_layout {
+      // background-color: rgb(116, 180, 180);
+      position: relative; // กำหนดให้เป็น relative div แม่ (parent)
+      max-height: 100vh; // กำหนดความกล้างสูงสุด ให้ตามความสูงของหน้าจอ 100%
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0%;
+      margin: 0%;
+
+      // รูป ตู้กาชา
+      .img_machine {
+        // background-color: rgb(85, 145, 145);
+        position: absolute; // กำหนดให้เป็น absolute div ลูก
+        // Viewport Width (vw) ปรับขนาดตามความ กว้าง ของหน้าจอ คิดเป็น %
+        // Viewport Height (vh) ปรับขนาดตามความ สูง ของหน้าจอ คิดเป็น %
+        height: 70vh;
+        z-index: 1;
+      }
+
+      // สิ่งต่างๆ ที่แสดงปยู่บนตู้กระจก (ลูกบอลหลากสี || แขนจับ)
+      .all_items_in_machine  {
+        // background-color: brown;
+        position: relative; // กำหนดให้เป็น relative div แม่ (parent)
+        width: 30vh; // ความกว้าง 30% ของความสูงหน้าจอ
+        height: 20.35vh; // ความสูง 22% ของความสูลหน้าจอ
+        bottom: 4.73vh; // ระยะห่าวจากด้านล่าง คือ 3.5% ของความสูงหน้าจอ
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // กำหนดรูปทรง สี่เหลี่ยมคางหมู
+        clip-path: polygon(0% 0%,
+                          100% 0%,
+                          95% 100%,
+                          5% 100%);
+        border-top: 1.3vh solid rgba(255, 255, 255, 1);
+        opacity: 0.6; // กำหนดความโปร่งใส
+
+        // ตัวแสดง เส้นเชือก ของ แขนจับลูกบอล ตอนที่เลื่อนลงมาคีบลูกบอล
+        .rope_of_handle_arm {
+          background-color: rgb(0, 0, 0); // ***ห้ามลบ***
+          position: absolute;
+          top: 0vh;
+          width: 0.5vh;
+          right: 9.55vh;
+          height: 1vh;
+          opacity: 0;
+          z-index: 3; // ถึงจะอยู่ใน z ระดับเดียวกันกับ img_handle_arm แต่ถูกสร้างก่อน (div ก่อน img_handle_arm) ดังนั้นจึงถูก img_handle_arm ทับ
+        }
+
+        // รูปแขนจับ
+        .img_handle_arm {
+          // background-color: rgb(171, 171, 138);
+          position: absolute; // กำหนดให้เป็น absolute div ลูก เพื่อที่จะสามารถกำหนด x, y โดยใช้ top right left buttom ได้
+          height: 6.7vh;
+          right: 3%; // ห่างจากทางขวา 3%
+          z-index: 3;
+        }
+
+        // div สำหรับ ลูกบอลหลากสี แถวที่ 1 (ด้านบนสุด)
+        .div_of_img_balls_1 {
+          // background-color: rgb(83, 183, 110);
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-top: 35%;
+
+          // รูป ลูกบอลหลากสี
+          // .img_ball {
+          //   position: absolute;
+          //   height: 50vh;
+          // }
+        }
+        // div สำหรับ ลูกบอลหลากสี แถวที่ 2 (ตรงกลาง)
+        .div_of_img_balls_2_3_4 {
+          // background-color: rgb(186, 208, 75);
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-top: -8%;
+
+          // รูป ลูกบอลหลากสี
+          // .img_ball {
+          //   // position: absolute;
+          //   // height: 4vh;
+          // }
+        }
+      }
+
+      // รูป logo TeamLink และ รูปข้อความชื่อ TeamLink
+      .img_teamLinkLogo_and_teamLinkText {
+        // background-color: rgb(48, 163, 71);
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        top: -10%;
+        z-index: 4;
+
+        // รูป TeamLink logo
+        .img_teamLing_logo {
+          // background-color: rgb(54, 68, 63);
+          height: 2.3vh;
+        }
+
+        // รูป TeamLink text
+        .img_teamLing_text {
+          // background-color: aliceblue;
+          height: 1.7vh;
+        }
+      }
+
+      // รูปคันโยก
+      .img_lever {
+        // background-color: burlywood;
+        position: absolute;
+        z-index: 5;
+        height: 8vh;
+        bottom: -2.5vh;
+        left: 2.2vh;
+        transform-origin: bottom center; // กำหนด จุดหมุนของคันโยกอยู่ที่ด้านล่าง
+        cursor: pointer; // เมื่อเอาเมาส์มาชี้
+        // rotate: -30deg; // เริ่มต้นให้เอียวไปทางซ้าย -30 องศา (deg || degrees || องศา)
+      }
+
+      // รูปมือ ครั้งที่ 1 || รูปมือชื้ที่คันโยก
+      .img_hand_1 {
+        // background-color: burlywood;
+        position: absolute;
+        height: 10vh;
+        bottom: -7vh;
+        left: 5vh;
+        z-index: 6;
+        opacity: 0; // กำหนดค่าเริ่มต้นเป็น 0 เพื่อไม่ให้แสดงขึ้นมาก่อนที่ผู้ใช้จะคลิกที่รูปคันโยก
+        animation: click 1s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า click
+      }
+
+      // รูปมือ ครั้งที่ 2 || รูปมือชื้ที่ลูกบอลที่หล่นลงมา
+      .img_hand_2 {
+        // background-color: burlywood;
+        position: absolute;
+        height: 10vh;
+        bottom: -9vh;
+        left: 6vh;
+        z-index: 6;
+        opacity: 0; // กำหนดค่าเริ่มต้นเป็น 0 เพื่อไม่ให้แสดงขึ้นมาก่อนที่ผู้ใช้จะคลิกที่รูปคันโยก
+        animation: click_2 1s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า click
+      }
+
+
+      // h2 text ข้อความ แสดงคำอธิบาย
+      .h2_text_hint {
+        // background-color: blueviolet;
+        position: absolute;
+        z-index: 7;
+        bottom: -22vh;
+        width: 45vh;
+        font-size: 4.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+
+        --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
+        // --stroke-color: #2f2cc9; // กำหนดค่าตัวแปลที่อยู่่ใน object
+        @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
+        animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
+        opacity: 0; // เริ่มต้นกำหนดให้ ไม่แสดงบนหน้าจอ
+      }
+
+      // div สำหรับเบลอพื้นหบัง เมื่อผู้ใช้คลิกหยิลูกบอลรางวัญขึ้นมา || โดยจะไม่เบลอแค่ลูกบอลรางวัลอย่างเดียว
+      .div_of_background_blur {
+        background-color: rgb(0, 0, 0); // ***ห้ามลบ***
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1; // ถ้า 8 จะทับ object อื่น ทำให้ไม่สามรถกด object อื่นๆได้ || ดังนั้นให้เป็น -1 ไปก่อน || แล้วค่อยให้เป็น 8 หลังจากที่กดคลิกหยิบลูกบอลราววัญขึ้นมามแล้ว
+        opacity: 0;
+      }
+
+      // รูปบอลที่เป็นรางวัล || โดยดึงเอามาจาก ist_of_balls ลูกใดลูกหนึง
+      .img_prize_ball_out_machine {
+        // --rotateFromTypeScript: 45deg; // สร้างตัวแปล สำหรับเก็บค่า scss || เพื่อรอการกำหนดค่าจาก TypeScript อีกที
+        // background-color: blueviolet;
+        position: absolute;
+        height: 4.5vh;
+        bottom: -9vh;
+        left: 5vh;
+        z-index: 9;
+        // transform: rotate(var(--rotateFromTypeScript)); // ใช้ var() เพื่อเรียกใช้ตัวแปลใน scss
+        opacity: 0;
+      }
+    }
+
+    // div ของ แสงหมุนพื้นหลัง ข้อความ และ กล่องของขวัญ
+    .div_of_lightBackground_hintOfGift_prizeGift {
+      // background-color: chocolate;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: -1; // ค่อยกำหนดให้มาอยู่ที่ 11
+
+      // รูปแสงหมุน
+      .img_light_background {
+        // background-color: bisque;
+        position: absolute;
+        height: 70vh;
+        animation: spin linear 5s infinite forwards; // เรียกใช้ animation ชื่อ spin
+        opacity: 0;
+        z-index: 12;
+      }
+
+      // h2 text ข้อความ แสดงคำอธิบาย ของกล่องของขวัญ
+      .h2_text_hint_of_gift {
+        // background-color: aquamarine;
+        position: absolute;
+        width: 45vh;
+        font-size: 4.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: aliceblue;
+        top: 10vh;
+        z-index: 13;
+        opacity: 0;
+
+        --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
+        // --stroke-color: #2f2cc9; // กำหนดค่าตัวแปลที่อยู่่ใน object
+        @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
+        animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
+      }
+
+      // รูปกล่องของขวัญ
+      .img_prize_gift {
+        // background-color: blue;
+        position: absolute;
+        height: 17vh;
+        animation: wiggle 2s ease-in-out infinite both;
+        opacity: 0;
+        z-index: 14;
+      }
+
+      // รูปแสดงเศษกระดาษโปรยปราย
+      .img_papers {
+        // background-color: #5a8ae2;
+        position: absolute;
+        z-index: -1; // กำหนดให้อยู่ที่ -1 ก่อน || แล้วจึงเปลี่นรเป็น 15 เมื่อกดคลิกที่ลูกบอลรางวัญ
+        height: 3vh;
+        overflow: visible; // อนุญาตให้เนื้อหาที่ล้นออกมาแสดงผล
+        pointer-events: none; // ป้องกันการมีผลกระทบจากการเลื่อนเมาส์
+        transform-origin: center; // ตั้งจุดศูนย์กลางของการขยาย
+      }
+    }
+
+    // div ส่วนแสดง ปุ่มกดกลับหน้าบ้าน และ ปุ่มกดเล่นอีกครั้ง
+    .div_of_buttons_goHome_playAgain{
+      // background-color: #d063b1;
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      bottom: 8vh;
+      z-index: 16;
+      width: 35vh; // กำหนดความกว่างไว้รอ เพื่อให้ปุ่มทั้ง 2 ใช้ (left: 0vh) และ (right: 0vh) ได้
+
+      .button_goHomePage, .button_playAgain, .button_icon {
+        // background-color: aqua;
+        color: blue;
+        height: 5vh;
+        width: 15vh;
+        font-size: 2.1vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      // ปุ่มกดกลับบ้าน
+      .button_goHomePage {
+        background-color: #5a8ae2;
+        position: absolute;
+        // left: 0vh; // กำหนด 0vh ใน gsap
+      }
+
+      // ปุ่มเล่นอีกครั้ง
+      .button_playAgain {
+        background-color: #51d17e;
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        // right: 0vh; // กำหนด 0vh ใน gsap
+      }
+    }
+  }
+}
+
+// สร้าง Animation ที่ชื่อว่า click สำหรับรูปมือ
+@keyframes click {
+  // ช่วงเริ่มต้นของ animation
+	0% {
+		transform: rotate(-45deg) translateY(0vh); // หมุนรูปไปทางซ้าย -45 องศา และ เลื่อนตำแหน่งไปท่ 0 % ของความสูงหน้าจอ
+	}
+  // ช่วง 80% ของ animation (ช่วงกลาง)
+	80% {
+		transform: rotate(-45deg) translateY(5vh); // หมุนรูปไปทางซ้าย -45 องศา และ เลื่อนตำแหน่งไปท่ 5 % ของความสูงหน้าจอ
+	}
+  // ช่วง 100% ของ animation (ช่วงสุดท้าย)
+	100% {
+		transform: rotate(-45deg) translateY(0vh); // หมุนรูปไปทางซ้าย -45 องศา และ เลื่อนตำแหน่งไปท่ 0 % ของความสูงหน้าจอ
+	}
+}
+
+// สร้าง Animation ที่ชื่อว่า click สำหรับรูปมือ
+@keyframes click_2 {
+  // ช่วงเริ่มต้นของ animation
+	0% {
+		transform: rotate(-150deg) translateY(0vh); // หมุนรูปไปทางซ้าย -45 องศา และ เลื่อนตำแหน่งไปท่ 0 % ของความสูงหน้าจอ
+	}
+  // ช่วง 80% ของ animation (ช่วงกลาง)
+	80% {
+		transform: rotate(-150deg) translateY(5vh); // หมุนรูปไปทางซ้าย -45 องศา และ เลื่อนตำแหน่งไปท่ 5 % ของความสูงหน้าจอ
+	}
+  // ช่วง 100% ของ animation (ช่วงสุดท้าย)
+	100% {
+		transform: rotate(-150deg) translateY(0vh); // หมุนรูปไปทางซ้าย -45 องศา และ เลื่อนตำแหน่งไปท่ 0 % ของความสูงหน้าจอ
+	}
+}
+
+// สร้าง Animation ที่ชื่อว่า wiggle สำหรับรูปข้อความ
+@keyframes wiggle {
+  // ช่วงเริ่มต้นของ animation
+	0% {
+		transform: rotate(-5deg); // หมุนไปทางซ้าย -5 องศา
+	}
+  // ช่วง 50% ของ animation (ช่วงกลาง)
+	50% {
+		transform: rotate(5deg); // หมุนไปทางขวา 5 องศา
+	}
+  // ช่วง 100% ของ animation (ช่วงสุดท้าย)
+	100% {
+		transform: rotate(-5deg); // หมุนไปทางซ้าย -5 องศา
+	}
+}
+
+// สร้าง animation หมุน || เพื่อกำหนดให้กับ พื้นหลังแสงหมุน
+@keyframes spin {
+	to {
+		transform: rotate(0turn);
+	}
+
+	from {
+		transform: rotate(1turn);
+	}
+}

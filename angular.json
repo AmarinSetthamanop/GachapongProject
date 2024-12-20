@@ -20,6 +20,7 @@
             "outputPath": "dist/gachapong-research",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/gachapong-research/",
             "polyfills": [
               "zone.js"
             ],

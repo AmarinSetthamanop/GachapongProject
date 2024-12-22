@@ -795,9 +795,9 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
       zIndex: -1,
       opacity: 0,
       duration: 0.1,
-      onComplete: () => {
-        this.machine_gacha_layout?.removeChild(this.img_papers!);
-      },
+      // onComplete: () => {
+      //   this.machine_gacha_layout?.removeChild(this.img_papers!);
+      // },
     });
   }
 

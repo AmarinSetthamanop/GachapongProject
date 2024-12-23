@@ -40,16 +40,59 @@
     padding: 0%;
     margin: 0%;
 
+
+    // div ส่วนแสดงรูป logo ข้อความ gachapong, ข้อความกด 1 ครั้ง = กี่ Points
+    .div_of_gachapongLoGoText_and_description_of_points {
+      // background-color: aquamarine;
+      position: absolute;
+      top: 8vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      // รูป logo ข้อความ gachappong
+      .gachapong_logo_text {
+        // background-color: #d063b1;
+        height: 9vh; // ปรับขนาดตามขนาดหน้าจอ
+      }
+
+      // ข้อความแสดงคำอธิบายการใช้คะแนนก่อนกดเล่น แถวที่ 1
+      .description_of_right_and_points_1 {
+        // background-color: #5a8ae2;
+        margin-top: -2.5vh;
+        margin-bottom: 0.5vh;
+        font-size: 1.5vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      // ข้อความแสดงคำอธิบายการใช้คะแนนก่อนกดเล่น แถวที่ 2
+      .description_of_right_and_points_2 {
+        background-color: rgba(0, 0, 0, 1); // ***ห้ามลบ***
+        color: rgba(255, 209, 52, 1);
+        margin: 0%;
+        text-align: center;
+        padding: 2% 5%;
+        border-radius: 30px;
+        border: 2px solid ;
+        font-size: 1.7vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    }
+
+
     // ส่วนประกอบของ ตู้กาชา
     .machine_gacha_layout {
-      // background-color: rgb(116, 180, 180);
+      // background-color: rgb(61, 211, 211);
       position: relative; // กำหนดให้เป็น relative div แม่ (parent)
       max-height: 100vh; // กำหนดความกล้างสูงสุด ให้ตามความสูงของหน้าจอ 100%
+      max-width: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 0%;
       margin: 0%;
+      bottom: -10vh;
 
       // รูป ตู้กาชา
       .img_machine {
@@ -177,7 +220,7 @@
         // background-color: burlywood;
         position: absolute;
         height: 10vh;
-        bottom: -7vh;
+        bottom: -10vh;
         left: 5vh;
         z-index: 6;
         opacity: 0; // กำหนดค่าเริ่มต้นเป็น 0 เพื่อไม่ให้แสดงขึ้นมาก่อนที่ผู้ใช้จะคลิกที่รูปคันโยก
@@ -198,31 +241,31 @@
 
 
       // h2 text ข้อความ แสดงคำอธิบาย
-      .h2_text_hint {
-        // background-color: blueviolet;
-        position: absolute;
-        z-index: 7;
-        bottom: -22vh;
-        width: 45vh;
-        font-size: 4.5vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: aliceblue;
+      // .h2_text_hint {
+      //   // background-color: blueviolet;
+      //   position: absolute;
+      //   z-index: 7;
+      //   bottom: -22vh;
+      //   width: 45vh;
+      //   font-size: 4.5vh;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   color: aliceblue;
 
-        --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
-        // --stroke-color: #2f2cc9; // กำหนดค่าตัวแปลที่อยู่่ใน object
-        @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
-        animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
-        opacity: 0; // เริ่มต้นกำหนดให้ ไม่แสดงบนหน้าจอ
-      }
+      //   --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
+      //   // --stroke-color: #2f2cc9; // กำหนดค่าตัวแปลที่อยู่่ใน object
+      //   @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
+      //   animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
+      //   opacity: 0; // เริ่มต้นกำหนดให้ ไม่แสดงบนหน้าจอ
+      // }
 
       // div สำหรับเบลอพื้นหบัง เมื่อผู้ใช้คลิกหยิลูกบอลรางวัญขึ้นมา || โดยจะไม่เบลอแค่ลูกบอลรางวัลอย่างเดียว
       .div_of_background_blur {
         background-color: rgb(0, 0, 0); // ***ห้ามลบ***
         position: absolute;
         width: 100vw;
-        height: 100vh;
+        height: 120vh;
         z-index: -1; // ถ้า 8 จะทับ object อื่น ทำให้ไม่สามรถกด object อื่นๆได้ || ดังนั้นให้เป็น -1 ไปก่อน || แล้วค่อยให้เป็น 8 หลังจากที่กดคลิกหยิบลูกบอลราววัญขึ้นมามแล้ว
         opacity: 0;
       }
@@ -263,25 +306,25 @@
       }
 
       // h2 text ข้อความ แสดงคำอธิบาย ของกล่องของขวัญ
-      .h2_text_hint_of_gift {
-        // background-color: aquamarine;
-        position: absolute;
-        width: 45vh;
-        font-size: 4.5vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: aliceblue;
-        top: 10vh;
-        z-index: 13;
-        opacity: 0;
+      // .h2_text_hint_of_gift {
+      //   // background-color: aquamarine;
+      //   position: absolute;
+      //   width: 45vh;
+      //   font-size: 4.5vh;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   text-align: center;
+      //   color: aliceblue;
+      //   top: 10vh;
+      //   z-index: 13;
+      //   opacity: 0;
 
-        --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
-        // --stroke-color: #2f2cc9; // กำหนดค่าตัวแปลที่อยู่่ใน object
-        @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
-        animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
-      }
+      //   --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
+      //   // --stroke-color: #2f2cc9; // กำหนดค่าตัวแปลที่อยู่่ใน object
+      //   @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
+      //   animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
+      // }
 
       // รูปกล่องของขวัญ
       .img_prize_gift {
@@ -306,43 +349,87 @@
     }
 
     // div ส่วนแสดง ปุ่มกดกลับหน้าบ้าน และ ปุ่มกดเล่นอีกครั้ง
-    .div_of_buttons_goHome_playAgain{
-      // background-color: #d063b1;
-      position: absolute;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      bottom: 8vh;
-      z-index: 16;
-      width: 35vh; // กำหนดความกว่างไว้รอ เพื่อให้ปุ่มทั้ง 2 ใช้ (left: 0vh) และ (right: 0vh) ได้
+    // .div_of_buttons_goHome_playAgain{
+    //   background-color: #d063b1;
+    //   position: absolute;
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: center;
+    //   align-items: center;
+    //   bottom: 8vh;
+    //   z-index: 16;
+    //   width: 35vh; // กำหนดความกว่างไว้รอ เพื่อให้ปุ่มทั้ง 2 ใช้ (left: 0vh) และ (right: 0vh) ได้
 
-      .button_goHomePage, .button_playAgain, .button_icon {
-        // background-color: aqua;
-        color: blue;
-        height: 5vh;
-        width: 15vh;
-        font-size: 2.1vh;
+    //   .button_goHomePage, .button_playAgain, .button_icon {
+    //     // background-color: aqua;
+    //     color: blue;
+    //     height: 5vh;
+    //     width: 15vh;
+    //     font-size: 2.1vh;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //   }
+
+    //   // ปุ่มกดกลับบ้าน
+    //   .button_goHomePage {
+    //     background-color: #5a8ae2;
+    //     position: absolute;
+    //     // left: 0vh; // กำหนด 0vh ใน gsap
+    //   }
+
+    //   // ปุ่มเล่นอีกครั้ง
+    //   .button_playAgain {
+    //     background-color: #51d17e;
+    //     position: absolute;
+    //     opacity: 0;
+    //     z-index: -1;
+    //     // right: 0vh; // กำหนด 0vh ใน gsap
+    //   }
+    // }
+
+    // ปุ่มกดกลับบ้าน
+    .button_goHomePage {
+      --buttonIconSize: 4vh; // สร้างตัวแปลสำหรับ scss
+
+      // background-color: #5a8ae2;
+      position: absolute;
+      background: none;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      color: black;
+      z-index: 16;
+      padding: 0%;
+      margin: 0%;
+      top: 1vh;
+      left: 1vh;
+      width: var(--buttonIconSize); // เรียกใช้ตัวแปล
+      height: var(--buttonIconSize);
+
+      .icon_arrow_back {
+        // background-color: #51d17e;
         display: flex;
         justify-content: center;
         align-items: center;
+        color: black;
+        z-index: 16;
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+        margin: 0%;
+        font-size: var(--buttonIconSize);
       }
+    }
 
-      // ปุ่มกดกลับบ้าน
-      .button_goHomePage {
-        background-color: #5a8ae2;
-        position: absolute;
-        // left: 0vh; // กำหนด 0vh ใน gsap
-      }
-
-      // ปุ่มเล่นอีกครั้ง
-      .button_playAgain {
-        background-color: #51d17e;
-        position: absolute;
-        opacity: 0;
-        z-index: -1;
-        // right: 0vh; // กำหนด 0vh ใน gsap
-      }
+    // ปุ่มเล่นอีกครั้ง
+    .button_playAgain {
+      background-color: #51d17e;
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+      bottom: 15vh;
+      // right: 0vh; // กำหนด 0vh ใน gsap
     }
   }
 }

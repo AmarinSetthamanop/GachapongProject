@@ -6,6 +6,16 @@
   <!-- game frame || หน้าจอสำหรับแสดงองค์ประกอบของตู้ gacha ทั้งหมด -->
   <div id="game_frame" class="game_frame">
 
+    <!-- div ส่วนแสดงรูป logo ข้อความ gachapong, ข้อความกด 1 ครั้ง = กี่ Points -->
+    <div id="div_of_gachapongLoGoText_and_description_of_points" class="div_of_gachapongLoGoText_and_description_of_points">
+      <!-- รูป logo ข้อความ gachappong -->
+      <img id="gachapong_logo_text" class="gachapong_logo_text" src="{{ images_list_gachapong_machine[9].path }}" alt="{{ images_list_gachapong_machine[9].title }}">
+      <!-- ข้อความแสดงคำอธิบายการใช้คะแนนก่อนกดเล่น แถวที่ 1 -->
+      <p id="description_of_right_and_points_1" class="description_of_right_and_points_1">1 right = 2 Points</p>
+      <!-- ข้อความแสดงคำอธิบายการใช้คะแนนก่อนกดเล่น แถวที่ 2 -->
+      <p id="description_of_right_and_points_2" class="description_of_right_and_points_2">129 Points (~ 64 Rights)</p>
+    </div>
+
     <!-- ส่วนประกอบของ ตู้กาชา -->
     <div id="machine_gacha_layout" class="machine_gacha_layout">
       <!-- รูป ตู้กาชา -->
@@ -54,7 +64,7 @@
       <img id="img_hand" class="img_hand_1" src="{{ images_list_gachapong_machine[8].path }}" alt="{{ images_list_gachapong_machine[8].title }}">
 
       <!-- h2 text ข้อความ แสดงคำอธิบาย -->
-      <h2 id="h2_text_hint" class="h2_text_hint">{{ text_hint }}</h2>
+      <!-- <h2 id="h2_text_hint" class="h2_text_hint">{{ text_hint }}</h2> -->
 
       <!-- div สำหรับเบลอพื้นหบัง เมื่อผู้ใช้คลิกหยิบลูกบอลรางวัญขึ้นมา || โดยจะไม่เบลอแค่ลูกบอลรางวัลอย่างเดียว -->
       <div id="div_of_background_blur" class="div_of_background_blur"></div>
@@ -82,19 +92,31 @@
       <img id="img_papers" class="img_papers" src="{{ images_list_gachapong_machine[7].path }}" alt="{{ images_list_gachapong_machine[7].title }}">
     </div>
 
-    <!-- div ส่วนแสดง ปุ่มกดกลับหน้าบ้าน และ ปุ่มกดเล่นอีกครั้ง -->
+    <!-- div ส่วนแสดง ปุ่มกดกลับหน้าบ้าน และ ปุ่มกดเล่นอีกครั้ง
     <div id="div_of_buttons_goHome_playAgain" class="div_of_buttons_goHome_playAgain">
-      <!-- ปุ่มกดกลับบ้าน -->
+       ปุ่มกดกลับบ้าน
       <button id="button_goHomePage" class="button_goHomePage" mat-flat-button (click)="go_to_home_page()">
         <mat-icon class="button_icon">home</mat-icon>
         Home
       </button>
-      <!-- ปุ่มเล่นอีกครั้ง -->
+       ปุ่มเล่นอีกครั้ง
       <button id="button_playAgain" class="button_playAgain" mat-flat-button (click)="play_again()">
         <mat-icon class="button_icon">autorenew</mat-icon>
         Again
       </button>
-    </div>
+    </div> -->
+
+
+    <!-- ปุ่มกดกลับบ้าน -->
+    <button id="button_goHomePage" class="button_goHomePage" (click)="go_to_home_page()">
+      <mat-icon class="icon_arrow_back">arrow_back</mat-icon>
+    </button>
+
+    <!-- ปุ่มเล่นอีกครั้ง -->
+    <button id="button_playAgain" class="button_playAgain" mat-flat-button (click)="play_again()">
+      <mat-icon class="button_icon">autorenew</mat-icon>
+      Again
+    </button>
 
 
   </div>

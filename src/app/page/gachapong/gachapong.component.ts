@@ -78,6 +78,7 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
     { title: 'teamLink_text', path: './assets/teamLink_text.png' }, // รูป ชื่อ TeamLink
     { title: 'papers', path: './assets/papers.png' }, // รูป เศษกระดาษ
     { title: 'hand', path: './assets/hand.png' }, // รูป มือ
+    { title: 'gachapong_text_logo', path: './assets/gachapong_text_logo1.svg' }, // รูป logo ข้อความ gachapong (.svg)
   ];
 
   // list ของรูปภาพ ลูกบอลหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
@@ -112,6 +113,9 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
   // element(tag div) object ของ id='game_frame'
   game_frame! : HTMLElement | null;
 
+  // element(tag img) object ของ id='gachapong_logo_text'
+  gachapong_logo_text! : HTMLElement | null;
+
   // element(tag div) object ของ id='machine_gacha_layout'
   machine_gacha_layout! : HTMLElement | null;
 
@@ -143,7 +147,7 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
   img_hand! : HTMLElement | null;
 
   // element(tag h2) object ของ id='h2_text_hint'
-  h2_text_hint! : HTMLElement | null;
+  // h2_text_hint! : HTMLElement | null;
 
   // list เก็บลูกบอลที่อยู่ในตู้ทั้งหมด
   list_of_balls : HTMLElement[] = [];
@@ -176,7 +180,7 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
   img_light_background! : HTMLElement | null;
 
   // element(tag img) object ของ id='h2_text_hint_of_gift'
-  h2_text_hint_of_gift! : HTMLElement | null;
+  // h2_text_hint_of_gift! : HTMLElement | null;
 
   // element(tag img) object ของ id='img_prize_gift'
   img_prize_gift! : HTMLElement | null;
@@ -194,7 +198,7 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
   is_pickup_prize_ball = false;
 
   // h2 text hint คำแนะนำแสดงบนหน้าจอ
-  text_hint = 'Tap to get a prize!';
+  // text_hint = 'Tap to get a prize!';
 
 
   // เก็บฟังก์ชันใน property || สร้าง Function สำหรับเก็บ function animation_lever_rock_left_right()
@@ -215,6 +219,7 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
     // กำหนด element(tag ต่างๆ) ให้กับตัวแปล
     this.gachapong_main_frame = document.getElementById('gachapong_main_frame');
     this.game_frame = document.getElementById('game_frame');
+    this.gachapong_logo_text = document.getElementById('gachapong_logo_text');
     this.machine_gacha_layout = document.getElementById('machine_gacha_layout');
     this.img_machine = document.getElementById('img_machine');
     this.all_items_in_machine = document.getElementById('all_items_in_machine');
@@ -226,13 +231,13 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
     this.div_of_img_balls_4 = document.getElementById('div_of_img_balls_4');
     this.img_lever = document.getElementById('img_lever');
     this.img_hand = document.getElementById('img_hand');
-    this.h2_text_hint = document.getElementById('h2_text_hint');
+    // this.h2_text_hint = document.getElementById('h2_text_hint');
     this.div_of_background_blur = document.getElementById('div_of_background_blur');
     this.img_prize_ball_out_machine = document.getElementById('img_prize_ball_out_machine');
     this.img_papers = document.getElementById('img_papers');
     this.div_of_lightBackground_hintOfGift_prizeGift = document.getElementById('div_of_lightBackground_hintOfGift_prizeGift');
     this.img_light_background = document.getElementById('img_light_background');
-    this.h2_text_hint_of_gift = document.getElementById('h2_text_hint_of_gift');
+    // this.h2_text_hint_of_gift = document.getElementById('h2_text_hint_of_gift');
     this.img_prize_gift = document.getElementById('img_prize_gift');
     this.button_goHomePage = document.getElementById('button_goHomePage');
     this.button_playAgain = document.getElementById('button_playAgain');
@@ -405,6 +410,13 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
         ease: 'power1.in', // ลักษณะแอนิเมชัน
         duration:  _duration,
       });
+    });
+
+    // กำหนด animation ให้กับ logo ข้อความ gachapong
+    gsap.from(this.gachapong_logo_text, {
+      scale: 0,
+      duration: 1,
+      ease: "elastic.out(1,0.4)", // รูปแบบของ animation (https://gsap.com/docs/v3/Eases)
     });
 
   }
@@ -806,7 +818,7 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
   show_lightBackground_textHint_giftBox () : void {
 
     // กำหนดข้อความที่จะแสดง โดยสามารถใส่ tag htmal (<br>) ได้
-    this.h2_text_hint_of_gift!.innerHTML = `You got a<br>${this.prize_gift.title}`;
+    // this.h2_text_hint_of_gift!.innerHTML = `You got a<br>${this.prize_gift.title}`;
 
     // แสดง div ของแสงหมุน และ กล่องของขวัญ
     gsap.to(this.div_of_lightBackground_hintOfGift_prizeGift, {
@@ -830,25 +842,31 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
           onComplete: () => {
             setTimeout(() => {
               // แสดงข้อความ
-              gsap.to(this.h2_text_hint_of_gift, {
-                opacity: 1,
-                y: '-5vh',
-                duration: 1,
-              });
+              // gsap.to(this.h2_text_hint_of_gift, {
+              //   opacity: 1,
+              //   y: '-5vh',
+              //   duration: 1,
+              // });
 
               // แสดงปุ่ม เล่นอีกครั้ง โดยเลื่อนปุ่มกลับบ้านไปทางซ้าย และเลื่อนปุ่มเล่นอีกครั้งไปทางขวา
-              gsap.to(this.button_goHomePage, { // เลื่อนปุ่มกลับบ้านไปทางซ้าย
-                left: '0vh',
-                duration: 1,
+              // gsap.to(this.button_goHomePage, { // เลื่อนปุ่มกลับบ้านไปทางซ้าย
+              //   left: '0vh',
+              //   duration: 1,
 
-                onStart: () => { // เลื่อนปุ่มเล่นอีกครั้งไปทางขวา
-                  gsap.to(this.button_playAgain, {
-                    zIndex: 17,
-                    opacity: 1,
-                    right: '0vh',
-                    duration: 1,
-                  });
-                },
+              //   onStart: () => { // เลื่อนปุ่มเล่นอีกครั้งไปทางขวา
+              //     gsap.to(this.button_playAgain, {
+              //       zIndex: 17,
+              //       opacity: 1,
+              //       right: '0vh',
+              //       duration: 1,
+              //     });
+              //   },
+              // });
+              gsap.to(this.button_playAgain, { // แสดงปุ่มเล่นอีกครั้ง
+                zIndex: 17,
+                opacity: 1,
+                // right: '0vh',
+                duration: 1,
               });
             }, 1000 * 2);
           },
@@ -879,15 +897,15 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
     // animation ของ แสดงข้อความ
     // gsap.set(this.h2_text_hint, { opacity: 0 }); // กำหนดค่าเริ่มต้นให้กับ element h2_text_hint || ไม่ให้แสดง
     // animation เลื่อนข้อความขึ้นมา
-    gsap.fromTo(this.h2_text_hint, {
-      bottom: '-30vh', // จากตำแหน่งเริ่มต้น
-      opacity: 0,
-      duration: 1,
-    }, {
-      bottom: '-22vh', // สู่ตำแหน่งสุดท้าย
-      opacity: 1,
-      duration: 1,
-    });
+    // gsap.fromTo(this.h2_text_hint, {
+    //   bottom: '-30vh', // จากตำแหน่งเริ่มต้น
+    //   opacity: 0,
+    //   duration: 1,
+    // }, {
+    //   bottom: '-22vh', // สู่ตำแหน่งสุดท้าย
+    //   opacity: 1,
+    //   duration: 1,
+    // });
   }
 
 
@@ -903,11 +921,11 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
 
     // gsap.set(this.h2_text_hint, { opacity: 1 }); // กำหนดค่าเริ่มต้นให้กับ element h2_text_hint || ให้แสดง
     // animation เลื่อนข้อความลงไป
-    gsap.to(this.h2_text_hint, {
-      bottom: '-30vh', // สู่ตำแหน่งสุดท้าย
-      opacity: 0,
-      duration: 1,
-    });
+    // gsap.to(this.h2_text_hint, {
+    //   bottom: '-30vh', // สู่ตำแหน่งสุดท้าย
+    //   opacity: 0,
+    //   duration: 1,
+    // });
   }
 
 
@@ -919,7 +937,7 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
     // animation เริ่มแสดงรูปมือ
 
     // h2 text hint คำแนะนำแสดงบนหน้าจอ
-    this.text_hint = 'Tap to claim it!';
+    // this.text_hint = 'Tap to claim it!';
 
     this.img_hand?.classList.remove('img_hand_1'); // เอา style class img_hand_1 ออกจาก element img_hand
     this.img_hand?.classList.add('img_hand_2'); // เอา style class img_hand_2 เข้าไปแทานที่ ใน element img_hand
@@ -932,11 +950,11 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
     // animation ของ แสดงข้อความ
     // gsap.set(this.h2_text_hint, { opacity: 0 }); // กำหนดค่าเริ่มต้นให้กับ element h2_text_hint || ไม่ให้แสดง
     // animation เลื่อนข้อความขึ้นมา
-    gsap.to(this.h2_text_hint, {
-      bottom: '-22vh', // จากตำแหน่งเริ่มต้น
-      opacity: 1,
-      duration: 1,
-    });
+    // gsap.to(this.h2_text_hint, {
+    //   bottom: '-22vh', // จากตำแหน่งเริ่มต้น
+    //   opacity: 1,
+    //   duration: 1,
+    // });
   }
 
 

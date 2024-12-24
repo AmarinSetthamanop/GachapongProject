@@ -57,13 +57,17 @@
         height: 9vh; // ปรับขนาดตามขนาดหน้าจอ
       }
 
+      .description_of_right_and_points_1, .description_of_right_and_points_2 {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold; // ตัวหนา
+      }
       // ข้อความแสดงคำอธิบายการใช้คะแนนก่อนกดเล่น แถวที่ 1
       .description_of_right_and_points_1 {
         // background-color: #5a8ae2;
         margin-top: -2.5vh;
         margin-bottom: 0.5vh;
-        font-size: 1.5vh;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.1vh;
       }
 
       // ข้อความแสดงคำอธิบายการใช้คะแนนก่อนกดเล่น แถวที่ 2
@@ -71,12 +75,10 @@
         background-color: rgba(0, 0, 0, 1); // ***ห้ามลบ***
         color: rgba(255, 209, 52, 1);
         margin: 0%;
-        text-align: center;
         padding: 2% 5%;
         border-radius: 30px;
-        border: 2px solid ;
-        font-size: 1.7vh;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 2px solid rgba(255, 209, 52, 1);
+        font-size: 1.3vh;
       }
     }
 
@@ -394,7 +396,7 @@
 
       // background-color: #5a8ae2;
       position: absolute;
-      background: none;
+      background: none; // พื้นหลังโปร่งใส
       text-align: center;
       cursor: pointer;
       border: none;
@@ -424,11 +426,15 @@
 
     // ปุ่มเล่นอีกครั้ง
     .button_playAgain {
-      background-color: #51d17e;
+      // background-color: #51d17e;
+      background: none; // พื้นหลังโป่งใส
+      border: 0px; // ไม่มีขอบ
       position: absolute;
+      width: 90vw;
+      height: 90vh;
       opacity: 0;
       z-index: -1;
-      bottom: 15vh;
+      // bottom: 15vh;
       // right: 0vh; // กำหนด 0vh ใน gsap
     }
   }

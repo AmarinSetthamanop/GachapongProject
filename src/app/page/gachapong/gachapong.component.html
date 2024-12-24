@@ -64,7 +64,7 @@
       <img id="img_hand" class="img_hand_1" src="{{ images_list_gachapong_machine[8].path }}" alt="{{ images_list_gachapong_machine[8].title }}">
 
       <!-- h2 text ข้อความ แสดงคำอธิบาย -->
-      <!-- <h2 id="h2_text_hint" class="h2_text_hint">{{ text_hint }}</h2> -->
+      <h2 id="h2_text_hint" class="h2_text_hint">{{ text_hint }}</h2>
 
       <!-- div สำหรับเบลอพื้นหบัง เมื่อผู้ใช้คลิกหยิบลูกบอลรางวัญขึ้นมา || โดยจะไม่เบลอแค่ลูกบอลรางวัลอย่างเดียว -->
       <div id="div_of_background_blur" class="div_of_background_blur"></div>
@@ -113,9 +113,9 @@
     </button>
 
     <!-- ปุ่มเล่นอีกครั้ง -->
-    <button id="button_playAgain" class="button_playAgain" (click)="play_again()">
-      <!-- <mat-icon class="button_icon">autorenew</mat-icon>
-      Again -->
+    <button mat-flat-button id="button_playAgain" class="button_playAgain" (click)="play_again()">
+      <!-- <mat-icon class="button_icon">autorenew</mat-icon> -->
+      Get It
     </button>
 
 

@@ -7,6 +7,9 @@
 // 	filter: drop-shadow(0px 2px 0px rgba(0, 0, 0, 0.2));
 // }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
 // สร้าง object แล้ว กำหนดรูปแบบของ ขอบข้อความ
 %stroke {
 	text-shadow: 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white), 0px 0px 2px var(--stroke-color, white);
@@ -45,7 +48,7 @@
     .div_of_gachapongLoGoText_and_description_of_points {
       // background-color: aquamarine;
       position: absolute;
-      top: 8vh;
+      top: 6vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -67,7 +70,7 @@
         // background-color: #5a8ae2;
         margin-top: -2.5vh;
         margin-bottom: 0.5vh;
-        font-size: 1.1vh;
+        font-size: 1.5vh;
       }
 
       // ข้อความแสดงคำอธิบายการใช้คะแนนก่อนกดเล่น แถวที่ 2
@@ -78,7 +81,7 @@
         padding: 2% 5%;
         border-radius: 30px;
         border: 2px solid rgba(255, 209, 52, 1);
-        font-size: 1.3vh;
+        font-size: 1.7vh;
       }
     }
 
@@ -243,24 +246,24 @@
 
 
       // h2 text ข้อความ แสดงคำอธิบาย
-      // .h2_text_hint {
-      //   // background-color: blueviolet;
-      //   position: absolute;
-      //   z-index: 7;
-      //   bottom: -22vh;
-      //   width: 45vh;
-      //   font-size: 4.5vh;
-      //   display: flex;
-      //   justify-content: center;
-      //   align-items: center;
-      //   color: aliceblue;
+      .h2_text_hint {
+        // background-color: blueviolet;
+        position: absolute;
+        z-index: 7;
+        bottom: -22vh;
+        width: 45vh;
+        font-size: 4.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
 
-      //   --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
-      //   // --stroke-color: #2f2cc9; // กำหนดค่าตัวแปลที่อยู่่ใน object
-      //   @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
-      //   animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
-      //   opacity: 0; // เริ่มต้นกำหนดให้ ไม่แสดงบนหน้าจอ
-      // }
+        // --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
+        --stroke-color: #f06e5b; // กำหนดค่าตัวแปลที่อยู่่ใน object
+        @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
+        animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
+        opacity: 0; // เริ่มต้นกำหนดให้ ไม่แสดงบนหน้าจอ
+      }
 
       // div สำหรับเบลอพื้นหบัง เมื่อผู้ใช้คลิกหยิลูกบอลรางวัญขึ้นมา || โดยจะไม่เบลอแค่ลูกบอลรางวัลอย่างเดียว
       .div_of_background_blur {
@@ -308,25 +311,26 @@
       }
 
       // h2 text ข้อความ แสดงคำอธิบาย ของกล่องของขวัญ
-      // .h2_text_hint_of_gift {
-      //   // background-color: aquamarine;
-      //   position: absolute;
-      //   width: 45vh;
-      //   font-size: 4.5vh;
-      //   display: flex;
-      //   justify-content: center;
-      //   align-items: center;
-      //   text-align: center;
-      //   color: aliceblue;
-      //   top: 10vh;
-      //   z-index: 13;
-      //   opacity: 0;
+      .h2_text_hint_of_gift { // ไม่มีกำหนด animation
+        // background-color: aquamarine;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 45vh;
+        font-size: 4.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: aliceblue;
+        top: 15vh;
+        z-index: 13;
+        opacity: 0;
 
-      //   --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
-      //   // --stroke-color: #2f2cc9; // กำหนดค่าตัวแปลที่อยู่่ใน object
-      //   @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
-      //   animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
-      // }
+        // --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
+        --stroke-color: #f06e5b; // กำหนดค่าตัวแปลที่อยู่่ใน object
+        @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
+        // animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
+      }
 
       // รูปกล่องของขวัญ
       .img_prize_gift {
@@ -426,15 +430,20 @@
 
     // ปุ่มเล่นอีกครั้ง
     .button_playAgain {
-      // background-color: #51d17e;
-      background: none; // พื้นหลังโป่งใส
-      border: 0px; // ไม่มีขอบ
       position: absolute;
-      width: 90vw;
-      height: 90vh;
+      background-color: rgba(0, 0, 0, 1); // ***ห้ามลบ***
+      color: rgba(255, 209, 52, 1);
+      border: 2px solid rgba(255, 209, 52, 1);
+      border-radius: 30px;
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold; // ตัวหนา
+      font-size: 2.5vh;
+      width: 25vh;
+      height: 7vh;
       opacity: 0;
       z-index: -1;
-      // bottom: 15vh;
+      bottom: 15vh;
       // right: 0vh; // กำหนด 0vh ใน gsap
     }
   }

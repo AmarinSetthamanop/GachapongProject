@@ -68,7 +68,7 @@
       // ข้อความแสดงคำอธิบายการใช้คะแนนก่อนกดเล่น แถวที่ 1
       .description_of_right_and_points_1 {
         // background-color: #5a8ae2;
-        margin-top: -2.5vh;
+        margin-top: -1.5vh;
         margin-bottom: 0.5vh;
         font-size: 1.5vh;
       }
@@ -261,7 +261,7 @@
         // --stroke-color: #5a8ae2; // กำหนดค่าตัวแปลที่อยู่่ใน object
         --stroke-color: #f06e5b; // กำหนดค่าตัวแปลที่อยู่่ใน object
         @extend %stroke; // เรียกใช้ object รูปแบบขอบข้อความที่ได้สร้างไว้ก่อนหน้านี้
-        animation: wiggle 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
+        animation: scale_Animation 2s ease-in-out infinite both; // เรียกใส่ Animation ที่ชื่อว่า wiggle
         opacity: 0; // เริ่มต้นกำหนดให้ ไม่แสดงบนหน้าจอ
       }
 
@@ -431,13 +431,13 @@
     // ปุ่มเล่นอีกครั้ง
     .button_playAgain {
       position: absolute;
-      background-color: rgba(0, 0, 0, 1); // ***ห้ามลบ***
-      color: rgba(255, 209, 52, 1);
-      border: 2px solid rgba(255, 209, 52, 1);
+      background-color: rgba(30, 164, 255, 1); // ***ห้ามลบ***
+      color: rgb(255, 255, 255);
+      // border: 2px solid rgba(255, 209, 52, 1);
       border-radius: 30px;
       text-align: center;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-weight: bold; // ตัวหนา
+      // font-family: Verdana, Geneva, Tahoma, sans-serif;
+      // font-weight: bold; // ตัวหนา
       font-size: 2.5vh;
       width: 25vh;
       height: 7vh;
@@ -448,6 +448,7 @@
     }
   }
 }
+
 
 // สร้าง Animation ที่ชื่อว่า click สำหรับรูปมือ
 @keyframes click {
@@ -465,6 +466,7 @@
 	}
 }
 
+
 // สร้าง Animation ที่ชื่อว่า click สำหรับรูปมือ
 @keyframes click_2 {
   // ช่วงเริ่มต้นของ animation
@@ -480,6 +482,7 @@
 		transform: rotate(-150deg) translateY(0vh); // หมุนรูปไปทางซ้าย -45 องศา และ เลื่อนตำแหน่งไปท่ 0 % ของความสูงหน้าจอ
 	}
 }
+
 
 // สร้าง Animation ที่ชื่อว่า wiggle สำหรับรูปข้อความ
 @keyframes wiggle {
@@ -497,6 +500,7 @@
 	}
 }
 
+
 // สร้าง animation หมุน || เพื่อกำหนดให้กับ พื้นหลังแสงหมุน
 @keyframes spin {
 	to {
@@ -506,4 +510,18 @@
 	from {
 		transform: rotate(1turn);
 	}
+}
+
+
+//  สร้าง animation สำหรับการขยาย และย่อขนาด
+@keyframes scale_Animation {
+  0% {
+    transform: scale(1); // ขนาดปกติ
+  }
+  50% {
+    transform: scale(1.1); // ขยายขนาด 1.1 เท่า
+  }
+  100% {
+    transform: scale(1); // กลับสู่ขนาดปกติ
+  }
 }

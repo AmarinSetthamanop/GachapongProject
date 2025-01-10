@@ -30,79 +30,79 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
 
   // สร้าง list ของรูปภาพ เครื่องเล่น Gachapong และชื่ออุปกรณ์ที่ใช้กับเครื่อง โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
   // images_list_gachapong_machine : Array<{ title: string; path: string }> = [
-  //   { title: 'cupboard_gacha', path: '../../../assets/machine_gacha.png' }, // รูป ตู้ gacha
-  //   { title: 'lever', path: '../../../assets/lever.png' }, // รูป คันโยก
-  //   { title: 'handle_arm', path: '../../../assets/handle_arm.png' }, // รูป แขนจับลูกบอล
-  //   { title: 'light_background', path: '../../../assets/light.png' }, // รูป แสงพื้นหลังฃ
-  //   { title: 'background_clouds', path: '../../../assets/background_clouds.png' }, // รูป พื้นหลังก้อนเมฆ
-  //   { title: 'teamLink_logo', path: '../../../assets/teamLink_logo.png' }, // รูป logo TeamLink
-  //   { title: 'teamLink_text', path: '../../../assets/teamLink_text.png' }, // รูป ชื่อ TeamLink
-  //   { title: 'papers', path: '../../../assets/papers.png' }, // รูป เศษกระดาษ
-  //   { title: 'hand', path: '../../../assets/hand.png' }, // รูป มือ
+  //   { title: 'cupboard_gacha', path: '../../../assets/forGachapong/machine_gacha.png' }, // รูป ตู้ gacha
+  //   { title: 'lever', path: '../../../assets/forGachapong/lever.png' }, // รูป คันโยก
+  //   { title: 'handle_arm', path: '../../../assets/forGachapong/handle_arm.png' }, // รูป แขนจับลูกบอล
+  //   { title: 'light_background', path: '../../../assets/forGachapong/light.png' }, // รูป แสงพื้นหลังฃ
+  //   { title: 'background_clouds', path: '../../../assets/forGachapong/background_clouds.png' }, // รูป พื้นหลังก้อนเมฆ
+  //   { title: 'teamLink_logo', path: '../../../assets/forGachapong/teamLink_logo.png' }, // รูป logo TeamLink
+  //   { title: 'teamLink_text', path: '../../../assets/forGachapong/teamLink_text.png' }, // รูป ชื่อ TeamLink
+  //   { title: 'papers', path: '../../../assets/forGachapong/papers.png' }, // รูป เศษกระดาษ
+  //   { title: 'hand', path: '../../../assets/forGachapong/hand.png' }, // รูป มือ
   // ];
 
   // // list ของรูปภาพ ลูกบอลหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
   // images_list_balls : Array<{ title: string; path: string }> = [
-  //   { title: 'ball_1', path: '../../../assets/ball_1.png' }, // รูป บอลสีฟ้าเข้ม
-  //   { title: 'ball_2', path: '../../../assets/ball_2.png' }, // รูป บอลสีม่วง
-  //   { title: 'ball_3', path: '../../../assets/ball_3.png' }, // รูป บอลสีเขียว
-  //   { title: 'ball_4', path: '../../../assets/ball_4.png' }, // รูป บอลสีฟ้าอ่อน
-  //   { title: 'ball_5', path: '../../../assets/ball_5.png' }, // รูป บอลสีชมพู
-  //   { title: 'ball_6', path: '../../../assets/ball_6.png' }, // รูป บอลสีเหลือง
-  //   { title: 'ball_7', path: '../../../assets/ball_7.png' }, // รูป บอลสีน้ำเงิน
-  //   { title: 'ball_8', path: '../../../assets/ball_8.png' }, // รูป บอลสีแดง
+  //   { title: 'ball_1', path: '../../../assets/forGachapong/ball_1.png' }, // รูป บอลสีฟ้าเข้ม
+  //   { title: 'ball_2', path: '../../../assets/forGachapong/ball_2.png' }, // รูป บอลสีม่วง
+  //   { title: 'ball_3', path: '../../../assets/forGachapong/ball_3.png' }, // รูป บอลสีเขียว
+  //   { title: 'ball_4', path: '../../../assets/forGachapong/ball_4.png' }, // รูป บอลสีฟ้าอ่อน
+  //   { title: 'ball_5', path: '../../../assets/forGachapong/ball_5.png' }, // รูป บอลสีชมพู
+  //   { title: 'ball_6', path: '../../../assets/forGachapong/ball_6.png' }, // รูป บอลสีเหลือง
+  //   { title: 'ball_7', path: '../../../assets/forGachapongball_7.png' }, // รูป บอลสีน้ำเงิน
+  //   { title: 'ball_8', path: '../../../assets/forGachapongball_8.png' }, // รูป บอลสีแดง
   // ];
 
   // // list ของรูปภาพ กล่องของขวัญหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
   // images_list_gifts : Array<{ title: string; path: string }> = [
-  //   { title: 'gift_1', path: '../../../assets/box_1.png' }, // รูป กล่องของขวัญสีฟ้าเข้ม
-  //   { title: 'gift_2', path: '../../../assets/box_2.png' }, // รูป กล่องของขวัญสีม่วง
-  //   { title: 'gift_3', path: '../../../assets/box_3.png' }, // รูป กล่องของขวัญสีเขียว
-  //   { title: 'gift_4', path: '../../../assets/box_4.png' }, // รูป กล่องของขวัญสีฟ้าอ่อน
-  //   { title: 'gift_5', path: '../../../assets/box_5.png' }, // รูป กล่องของขวัญสีชมพู
-  //   { title: 'gift_6', path: '../../../assets/box_6.png' }, // รูป กล่องของขวัญสีเหลือง
-  //   { title: 'gift_7', path: '../../../assets/box_7.png' }, // รูป กล่องของขวัญสีน้ำเงิน
-  //   { title: 'gift_8', path: '../../../assets/box_8.png' }, // รูป กล่องของขวัญสีแดง
+  //   { title: 'gift_1', path: '../../../assets/forGachapong/box_1.png' }, // รูป กล่องของขวัญสีฟ้าเข้ม
+  //   { title: 'gift_2', path: '../../../assets/forGachapong/box_2.png' }, // รูป กล่องของขวัญสีม่วง
+  //   { title: 'gift_3', path: '../../../assets/forGachapong/box_3.png' }, // รูป กล่องของขวัญสีเขียว
+  //   { title: 'gift_4', path: '../../../assets/forGachapong/box_4.png' }, // รูป กล่องของขวัญสีฟ้าอ่อน
+  //   { title: 'gift_5', path: '../../../assets/forGachapong/box_5.png' }, // รูป กล่องของขวัญสีชมพู
+  //   { title: 'gift_6', path: '../../../assets/forGachapong/box_6.png' }, // รูป กล่องของขวัญสีเหลือง
+  //   { title: 'gift_7', path: '../../../assets/forGachapong/box_7.png' }, // รูป กล่องของขวัญสีน้ำเงิน
+  //   { title: 'gift_8', path: '../../../assets/forGachapong/box_8.png' }, // รูป กล่องของขวัญสีแดง
   // ];
 
 
 
   //  path file สำหรับ build
   images_list_gachapong_machine : Array<{ title: string; path: string }> = [
-    { title: 'cupboard_gacha', path: './assets/machine_gacha.png' }, // รูป ตู้ gacha
-    { title: 'lever', path: './assets/lever.png' }, // รูป คันโยก
-    { title: 'handle_arm', path: './assets/handle_arm.png' }, // รูป แขนจับลูกบอล
-    { title: 'light_background', path: './assets/light.png' }, // รูป แสงพื้นหลังฃ
-    { title: 'background_clouds', path: './assets/background_clouds1.svg' }, // รูป พื้นหลังก้อนเมฆ
-    { title: 'teamLink_logo', path: './assets/teamLink_logo.png' }, // รูป logo TeamLink
-    { title: 'teamLink_text', path: './assets/teamLink_text.png' }, // รูป ชื่อ TeamLink
-    { title: 'papers', path: './assets/papers.png' }, // รูป เศษกระดาษ
-    { title: 'hand', path: './assets/hand.png' }, // รูป มือ
-    { title: 'gachapong_text_logo', path: './assets/gachapong_text_logo1.svg' }, // รูป logo ข้อความ gachapong (.svg)
+    { title: 'cupboard_gacha', path: './assets/forGachapong/machine_gacha.png' }, // รูป ตู้ gacha
+    { title: 'lever', path: './assets/forGachapong/lever.png' }, // รูป คันโยก
+    { title: 'handle_arm', path: './assets/forGachapong/handle_arm.png' }, // รูป แขนจับลูกบอล
+    { title: 'light_background', path: './assets/forGachapong/light.png' }, // รูป แสงพื้นหลังฃ
+    { title: 'background_clouds', path: './assets/forGachapong/background_clouds1.svg' }, // รูป พื้นหลังก้อนเมฆ
+    { title: 'teamLink_logo', path: './assets/forGachapong/teamLink_logo.png' }, // รูป logo TeamLink
+    { title: 'teamLink_text', path: './assets/forGachapong/teamLink_text.png' }, // รูป ชื่อ TeamLink
+    { title: 'papers', path: './assets/forGachapong/papers.png' }, // รูป เศษกระดาษ
+    { title: 'hand', path: './assets/forGachapong/hand.png' }, // รูป มือ
+    { title: 'gachapong_text_logo', path: './assets/forGachapong/gachapong_text_logo1.svg' }, // รูป logo ข้อความ gachapong (.svg)
   ];
 
   // list ของรูปภาพ ลูกบอลหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
   images_list_balls : Array<{ title: string; path: string }> = [
-    { title: 'ball_1', path: './assets/ball_1.png' }, // รูป บอลสีฟ้าเข้ม
-    { title: 'ball_2', path: './assets/ball_2.png' }, // รูป บอลสีม่วง
-    { title: 'ball_3', path: './assets/ball_3.png' }, // รูป บอลสีเขียว
-    { title: 'ball_4', path: './assets/ball_4.png' }, // รูป บอลสีฟ้าอ่อน
-    { title: 'ball_5', path: './assets/ball_5.png' }, // รูป บอลสีชมพู
-    { title: 'ball_6', path: './assets/ball_6.png' }, // รูป บอลสีเหลือง
-    { title: 'ball_7', path: './assets/ball_7.png' }, // รูป บอลสีน้ำเงิน
-    { title: 'ball_8', path: './assets/ball_8.png' }, // รูป บอลสีแดง
+    { title: 'ball_1', path: './assets/forGachapong/ball_1.png' }, // รูป บอลสีฟ้าเข้ม
+    { title: 'ball_2', path: './assets/forGachapong/ball_2.png' }, // รูป บอลสีม่วง
+    { title: 'ball_3', path: './assets/forGachapong/ball_3.png' }, // รูป บอลสีเขียว
+    { title: 'ball_4', path: './assets/forGachapong/ball_4.png' }, // รูป บอลสีฟ้าอ่อน
+    { title: 'ball_5', path: './assets/forGachapong/ball_5.png' }, // รูป บอลสีชมพู
+    { title: 'ball_6', path: './assets/forGachapong/ball_6.png' }, // รูป บอลสีเหลือง
+    { title: 'ball_7', path: './assets/forGachapong/ball_7.png' }, // รูป บอลสีน้ำเงิน
+    { title: 'ball_8', path: './assets/forGachapong/ball_8.png' }, // รูป บอลสีแดง
   ];
 
   // list ของรูปภาพ กล่องของขวัญหลากสี และชื่อ โดยมีชนิกข้อมูลเป็น Json {title: string; path: string}
   images_list_gifts : Array<{ title: string; path: string }> = [
-    { title: 'gift_1', path: './assets/box_1.png' }, // รูป กล่องของขวัญสีฟ้าเข้ม
-    { title: 'gift_2', path: './assets/box_2.png' }, // รูป กล่องของขวัญสีม่วง
-    { title: 'gift_3', path: './assets/box_3.png' }, // รูป กล่องของขวัญสีเขียว
-    { title: 'gift_4', path: './assets/box_4.png' }, // รูป กล่องของขวัญสีฟ้าอ่อน
-    { title: 'gift_5', path: './assets/box_5.png' }, // รูป กล่องของขวัญสีชมพู
-    { title: 'gift_6', path: './assets/box_6.png' }, // รูป กล่องของขวัญสีเหลือง
-    { title: 'gift_7', path: './assets/box_7.png' }, // รูป กล่องของขวัญสีน้ำเงิน
-    { title: 'gift_8', path: './assets/box_8.png' }, // รูป กล่องของขวัญสีแดง
+    { title: 'gift_1', path: './assets/forGachapong/box_1.png' }, // รูป กล่องของขวัญสีฟ้าเข้ม
+    { title: 'gift_2', path: './assets/forGachapong/box_2.png' }, // รูป กล่องของขวัญสีม่วง
+    { title: 'gift_3', path: './assets/forGachapong/box_3.png' }, // รูป กล่องของขวัญสีเขียว
+    { title: 'gift_4', path: './assets/forGachapong/box_4.png' }, // รูป กล่องของขวัญสีฟ้าอ่อน
+    { title: 'gift_5', path: './assets/forGachapong/box_5.png' }, // รูป กล่องของขวัญสีชมพู
+    { title: 'gift_6', path: './assets/forGachapong/box_6.png' }, // รูป กล่องของขวัญสีเหลือง
+    { title: 'gift_7', path: './assets/forGachapong/box_7.png' }, // รูป กล่องของขวัญสีน้ำเงิน
+    { title: 'gift_8', path: './assets/forGachapong/box_8.png' }, // รูป กล่องของขวัญสีแดง
   ];
 
 
@@ -152,17 +152,8 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
   // list เก็บลูกบอลที่อยู่ในตู้ทั้งหมด
   list_of_balls : HTMLElement[] = [];
 
-  // list สำหรับเก็บค่า rotate ของลูกบอลหลากสีแต่ละลูก ที่ได้จากการสรา้ง
-  // rotate_list_of_balls : string[] = [];
-
-  // % ของ top, left (y, x) ของลูกบอลหลากสีของแต่ละลูก
-  // top_left_of_balls : { top : string, left : string }[] = [];
-
   // ตัวแปลสำหรับเก็บค่าของกล่องของขวัญ || มีชนิดข้อมูลเป็น Json {title: string; path: string} || โดยสุ่มจาก images_list_gifts มาเก็บไว้
   prize_gift! : { title: string; path: string };
-
-  // attribule เก็บ object ของลูกบอลที่เป็นรางวัล จาก list_of_balls[] (ลูกบอลที่แสดงอยู่ ข้องในตู้กระจก gachapong)
-  // img_prize_ball_in_machine! : HTMLElement | null;
 
   // element(tag div) object ของ id='div_of_background_blur'
   div_of_background_blur! : HTMLElement | null;
@@ -257,9 +248,7 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
     this.createBall(-5, -50, this.div_of_img_balls_3!);
     this.createBall(-5, -50, this.div_of_img_balls_4!);
 
-
     // console.log(this.top_left_of_balls);
-
 
     console.log(this.list_of_balls);
 
@@ -312,9 +301,6 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
         ball.style.top = `${Math.random() * y}%`; // สุ่ม ตำแหน่ง ขึ้น-ลง
         ball.style.left = `${Math.random() * x}%`; // สุ่ม ตำแหน่ง ซ้าย-ขวา
       }
-      // else {
-      //   ball.style.backgroundColor = 'blue';
-      // }
 
 
       // เพิ่มลูกบอลเข้าไปใน div_of_img_balls_1 - 3
@@ -333,51 +319,6 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
 
   //--------------------------------------------------- Animation เลื่อนตู้กาชาขึ้นมา
   animation_gachapong_up () : void {
-    // // สร้าง animation แบบ from (มาจากไหน)
-    // gsap.from(this.machine_gacha_layout, {
-    //   y: '100vh', // มาจาก y ที่ 100% ของความสูงหน้าจอ
-    //   duration: 0.6, // ใช้เวลา 1 วินาที
-    //   ease: 'none', // จังหวะหลุด ไม่มีการ slow
-
-    //   // เมื่อ Animation นี้ทำงานเสร็จแล้ว || ให้ลูกบอลกระเด้งขึ้นทุกลูก
-    //   onComplete: () => {
-    //     console.log('ตู้กาชาเลื่อขึ้นมาแล้ว');
-    //     // เข้าถึง ball แต่ละลูก เพื่อกำหนด Animation ให้กระเด้ง
-    //     this.list_of_balls.forEach(ball => {
-    //       // สร้าง object ของ Animation
-    //       let tl = gsap.timeline();
-    //       // สุ่มเวลาให้กับบอลแต่ละลูก
-    //       const _duration = 0.05 + Math.random() * 0.1;
-    //       // กำหนด Animation ให้ลูกบอลทีละลูก
-    //       tl.to(ball, {
-    //         y: -(10 + Math.random() * 10), // เด้งขึ้นในแนวแกน -y แบบสุ่มหความสูง
-    //         ease: 'power1.out', // ลักษณะแอนิเมชัน
-		// 			   duration: _duration,
-    //       }).to(ball, {
-    //         y: 0, // จากนั้นกลับมาที่เดิม
-    //         ease: 'power1.in' // ลักษณะแอนิเมชัน
-    //         duration: _duration,
-    //       });
-    //     });
-
-    //     // หน่วงเวลา 1.5 วิ || ถ้า Animation ลูกบอลเด้งทำงานเสร็จจนหมด จึงทำงานต่อไป
-    //     setTimeout(() => {
-    //       console.log('บอลเด้งเสร็จหมดแล้ว');
-    //       // ถ้ายังไม่เริ่มเกม || ถ้ายังไม่เมาส์ไปคลิกที่รูปคันโยก ภายใน 1.5 วิ || เมื่อเอาเมาส์ไปคลิกที่คันโยกที่อยู่บนตู้กาชา
-    //       if (!this.is_game_started) {
-    //         console.log('ยังไม่เริ่มเกม');
-
-    //         // // เพิ่ม Event ให้กับรูปคันโยก || เมื่อคลิกที่รูปคันโยกจะไปทำงาน function animation_lever_rock_left_right()
-    //         // this.img_lever!.addEventListener('click', this.animation_lever_rock_left_right.bind(this));//////////////////////////////////////////////////////////////////////////////////////////////
-
-    //         // เรียกใช้ function แสดงรูปมือ และแสดงข้อความ พร้อม animetion
-    //         this.show_hand_and_text_hint();
-    //       }
-    //     }, 1000 * 1.5); // หน่วงเวลา 1.5 วิ
-
-    //   },
-    // });
-
     // ให้ลูกบอลกระเด้งขึ้นทุกลูก
     console.log('ตู้กาชาเลื่อนขึ้นมาแล้ว');
     // เข้าถึง ball แต่ละลูก เพื่อกำหนด Animation ให้กระเด้ง
@@ -597,12 +538,6 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
     this.prizeBallClick = this.prize_ball_pickup.bind(this);//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     this.img_prize_ball_out_machine?.addEventListener('click', this.prizeBallClick!);/////////////////////////////////////////////////////////////////////////////////////
 
-    // ทำให้ ลูกบอลรางวัล (ที่อยู่ในตู้กระจกกาชา) หล่นลงมาในช่องเก็บบอลของตู้กาชา
-    // gsap.to(this.list_of_balls[10], {
-    //   y: '5vh',
-    //   duration: 1,
-    // });
-
     // ทำให้ ลูกบอลรางวัล (ที่อยู่นอกตู้กระจก) หล่นลงมาในช่องเก็บบอลของตู้กาชา
     let tl = gsap.timeline({
       // ถ้า ลูกบอลหล่นลงมาแล้ว หลังจาก 1.5 วิ ให้แสดง hint_2 ต่อแล้ว
@@ -632,39 +567,6 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
       },
   })
 
-    // กำหนดรูปแบบของการหล่นลงมาของลูกบอลข้างนอก กระจกตู้กาชา
-    // บอลรางวัล ตกลงมาแบบสมจริง
-		// tl.to(this.img_prize_ball_out_machine, {
-		// 	y: '5vh',
-		// 	ease: 'power1.in',
-		// 	duration: 0.5,
-    //   zIndex: 1,
-    //   opacity: 1,
-		// }).to(this.img_prize_ball_out_machine, {
-		// 	y: '4vh',
-		// 	ease: 'power1.out',
-		// 	duration: 0.2,
-    //   zIndex: 1,
-    //   opacity: 1,
-		// }).to(this.img_prize_ball_out_machine, {
-		// 	y: '5vh',
-		// 	ease: 'power1.in',
-		// 	duration: 0.2,
-    //   zIndex: 1,
-    //   opacity: 1,
-		// }).to(this.img_prize_ball_out_machine, {
-		// 	y: '4.5vh',
-		// 	ease: 'power1.out',
-		// 	duration: 0.1,
-    //   zIndex: 1,
-    //   opacity: 1,
-		// }).to(this.img_prize_ball_out_machine, {
-		// 	y: '5vh',
-		// 	ease: 'power1.in',
-		// 	duration: 0.1,
-    //   zIndex: 1,
-    //   opacity: 1,
-		// });
   }
 
 
@@ -807,9 +709,6 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
       zIndex: -1,
       opacity: 0,
       duration: 0.1,
-      // onComplete: () => {
-      //   this.machine_gacha_layout?.removeChild(this.img_papers!);
-      // },
     });
   }
 
@@ -853,20 +752,6 @@ export class GachapongComponent implements OnInit { // เรียกใช้�
                 duration: 1,
               });
 
-              // แสดงปุ่ม เล่นอีกครั้ง โดยเลื่อนปุ่มกลับบ้านไปทางซ้าย และเลื่อนปุ่มเล่นอีกครั้งไปทางขวา
-              // gsap.to(this.button_goHomePage, { // เลื่อนปุ่มกลับบ้านไปทางซ้าย
-              //   left: '0vh',
-              //   duration: 1,
-
-              //   onStart: () => { // เลื่อนปุ่มเล่นอีกครั้งไปทางขวา
-              //     gsap.to(this.button_playAgain, {
-              //       zIndex: 17,
-              //       opacity: 1,
-              //       right: '0vh',
-              //       duration: 1,
-              //     });
-              //   },
-              // });
               gsap.to(this.button_playAgain, { // แสดงปุ่มเล่นอีกครั้ง
                 zIndex: 17,
                 opacity: 1,
